@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - CBI Café</title>
+    <link rel="stylesheet" href="/Front/Asseds/Cores.css">
+    <link rel="stylesheet" href="/Front/Asseds/Home.css">
+    <link rel="stylesheet" href="/Front/Asseds/HeaderFooter.css">
+    <script src="../Asseds/homeMain.js" defer></script>
+    <script src="../Asseds/HeaderMain.Js" defer></script>
+</head>
+
+<body>
+    <header>
+    </header>
+    
+    <!-- ELEMENTO FLUTUANTE COM POPUP DO CARRINHO -->
+<div class="carrinho-flutuante-container">
+    <button type="button" class="carrinho-flutuante-btn" aria-label="Ver Carrinho">
+        <img src="/Front/Asseds/CarinhoIcone.png" alt="Carrinho">
+        <span class="contador-carrinho">2</span>
+    </button>
+
+    <!-- POPUP DE PRÉ-VISUALIZAÇÃO DOS ITENS -->
+    <div class="carrinho-preview-popup">
+        <h4>Seu Carrinho</h4>
+
+        <ul class="preview-lista-itens">
+            <li class="preview-item">
+                <img src="https://placehold.co/40x40" alt="Espresso Observador">
+                <div class="preview-detalhes">
+                    <span class="preview-nome">Espresso Observador</span>
+                    <span class="preview-qtd-preco">1x R$ 8,00</span>
+                </div>
+            </li>
+            <li class="preview-item">
+                <img src="https://placehold.co/40x40" alt="Croissant Artesanal">
+                <div class="preview-detalhes">
+                    <span class="preview-nome">Croissant Artesanal</span>
+                    <span class="preview-qtd-preco">1x R$ 11,00</span>
+                </div>
+            </li>
+        </ul>
+
+        <div class="preview-total">
+            <span>Subtotal:</span>
+            <strong id="TotalConta">R$ 19,00</strong>
+        </div>
+
+        <div class="preview-acoes">
+            <a href="checkout.html" class="btn-checkout-rapido">Finalizar</a>
+        </div>
+    </div>
+</div>
+    <main>
+        <section class="sobre-nos" id="sobre">
+            <div class="sobre-imagem">
+                <img src="/Front/Asseds/CafeImg.png" alt="Interior do CBI Café">
+            </div>
+            <div class="sobre-conteudo">
+                <h2>Sobre o CBI Café</h2>
+                <p class="subtitulo">Sem truques. Apenas a atenção aos detalhes que tornam cada xícara única.</p>
+
+                <p>
+                    Não existe leitura de mentes ou truques elaborados. O segredo de uma boa experiência
+                    é prestar atenção ao que a maioria deixa passar. O CBI Café nasceu para observar cada detalhe,
+                    da escolha do grão ao tempo de infusão.
+                </p>
+
+                <p>
+                    Seja para decifrar um problema complexo, concentrar-se nos estudos ou apreciar um bom chá,
+                    criamos o ambiente ideal para quem valoriza clareza, lógica e conforto.
+                </p>
+
+                <div class="pilares">
+                    <div class="pilar-card">
+                        <h3>Observação Atenta</h3>
+                        <p>Seleção criteriosa de grãos e controle rígido de temperatura e extração.</p>
+                    </div>
+                    <div class="pilar-card">
+                        <h3>Dedução do Sabor</h3>
+                        <p>Um cardápio equilibrado entre clássicos encorpados e infusões leves.</p>
+                    </div>
+                    <div class="pilar-card">
+                        <h3>Foco e Clareza</h3>
+                        <p>Ambiente planejado para oferecer silêncio, boas conexões e inspiração.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="Destaque">
+            <h2>Destaques da semana</h2>
+            <div class="ListaDestaques">
+                <div class="CardDestaque">
+                    <div class="ImgProduto">
+                        <img src="https://placehold.co/100x100" alt="Café com chocolate">
+                    </div>
+                    <div class="InfoProduto">
+                        <h3>Café com chocolate</h3>
+                        <p>Descrição do produto</p>
+                    </div>
+                    <div class="cardAddCarinho">
+                        <span>R$ 15,00</span>
+                        <button>Adicionar ao carinho</button>
+                    </div>
+                </div>
+                <div class="CardDestaque">
+                    <div class="ImgProduto">
+                        <img src="https://placehold.co/100x100" alt="Café com chocolate">
+                    </div>
+                    <div class="InfoProduto">
+                        <h3>Café com chocolate</h3>
+                        <p>Descrição do produto</p>
+                    </div>
+                    <div class="cardAddCarinho">
+                        <span>R$ 15,00</span>
+                        <button>Adicionar ao carinho</button>
+                    </div>
+                </div>
+                <div class="CardDestaque">
+                    <div class="ImgProduto">
+                        <img src="https://placehold.co/100x100" alt="Café com chocolate">
+                    </div>
+                    <div class="InfoProduto">
+                        <h3>Café com chocolate</h3>
+                        <p>Descrição do produto</p>
+                    </div>
+                    <div class="cardAddCarinho">
+                        <span>R$ 15,00</span>
+                        <button>Adicionar ao carinho</button>
+                    </div>
+                </div>
+                <div class="CardDestaque">
+                    <div class="ImgProduto">
+                        <img src="https://placehold.co/100x100" alt="Café com chocolate">
+                    </div>
+                    <div class="InfoProduto">
+                        <h3>Café com chocolate</h3>
+                        <p>Descrição do produto</p>
+                    </div>
+                    <div class="cardAddCarinho">
+                        <span>R$ 15,00</span>
+                        <button>Adicionar ao carinho</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="avaliacao">
+            <h2>Avaliação</h2>
+            <div class="ListaAvaliacao" id="ListaAvaliacao">
+              
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CBI Café. Todos os direitos reservados.</p>
+        <p>Horário: Segunda a Sábado - 07h às 20h | Contato: contato@cbicafe.com.br</p>
+    </footer>
+</body>
+
+</html>

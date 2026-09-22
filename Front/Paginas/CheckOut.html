@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - CBI Café</title>
+    <link rel="stylesheet" href="/Front/Asseds/Cores.css">
+    <link rel="stylesheet" href="/Front/Asseds/Checkout.css">
+    <link rel="stylesheet" href="/Front/Asseds/HeaderFooter.css">
+    <script src="/Front/Asseds/checkOut.js" defer></script>
+    <script src="../Asseds/HeaderMain.Js" defer></script>
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <main class="checkout-main">
+        <h2>Finalizar Pedido</h2>
+
+        <form class="checkout-container"id="checkout-container"  onsubmit="finalizarCompra(event)">
+            
+            <!-- ESQUERDA: RESUMO DO PEDIDO E DADOS -->
+            <div class="checkout-detalhes">
+                <section class="secao-checkout">
+                    <h3>1. Resumo do Pedido</h3>
+                    <ul class="lista-itens-checkout">
+                        <li>
+                            <span>Espresso Observador (x1)</span>
+                            <strong>R$ 8,00</strong>
+                        </li>
+                        <li>
+                            <span>Croissant Artesanal (x1)</span>
+                            <strong>R$ 11,00</strong>
+                        </li>
+                    </ul>
+                    <div class="total-checkout">
+                        <span>Total:</span>
+                        <strong id="Total">R$ 00,00</strong>
+                    </div>
+                </section>
+
+                <section class="secao-checkout">
+                    <h3>2. Dados de Entrega e Pagamento</h3>
+                
+                    <div class="grupo-campo">
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" required placeholder="00000-000" minlength="8" maxlength="8">
+                         <label for="Nresidencia">Numero da residencia</label>
+                        <input type="text" id="Nresidencia" required placeholder="000">
+                        <output id="Endereco"> Ex: Rua das Flores, 123</output>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="pagamento">Forma de Pagamento:</label>
+                        <select id="pagamento" required>
+                            <option value="">Selecione...</option>
+                            <option value="pix">PIX</option>
+                            <option value="cartao">Cartão de Crédito / Débito</option>
+                            <option value="dinheiro">Dinheiro na Entrega</option>
+                        </select>
+                    </div>
+                </section>
+            </div>
+            <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+                <button type="submit" class="btn-finalizar" style="width: 50%;">Concluir e Pagar</button>
+            </div>
+            <!-- DIREITA: AVALIAÇÃO E FINALIZAÇÃO -->
+           
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CBI Café. Todos os direitos reservados.</p>
+        <p>Horário: Segunda a Sábado - 07h às 20h | Contato: contato@cbicafe.com.br</p>
+    </footer>
+
+   
+</body>
+
+</html>

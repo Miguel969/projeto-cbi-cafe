@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg-body);
+  color: var(--color-text-main);
+  font-family: system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  display: block;
+}
+
+main {
+  display: flex;
+  position: relative;
+  gap: 24px;
+  width: calc(100% - 40px);
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 80vh;
+  padding: 20px;
+}
+
+/* --- SEÇÃO ESQUERDA: LISTA DE PEDIDOS --- */
+.ContainerLista {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ContainerLista h2,
+.DetalhePedido h2 {
+  color: var(--color-primary);
+  font-size: 1.25rem;
+}
+
+.ListaPedidos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.CardPedido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 70px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.CardPedido:hover,
+.CardPedido.Ativo {
+  border-color: var(--color-accent);
+  box-shadow: 0 2px 8px rgba(60, 34, 24, 0.08);
+}
+
+.InfoPedido {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.CodigoPedido {
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.DataPedido {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.StatusEntrega {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.Preco {
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+/* --- SEÇÃO DIREITA: DETALHE DO PEDIDO --- */
+.DetalhePedido {
+
+  flex: 1.5;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 20px;
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.Historico {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.Historico h3 {
+  color: var(--color-primary-light);
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+.StatusAtual {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  width: fit-content;
+}
+
+details {
+  background-color: var(--color-bg-body);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--color-primary-light);
+}
+
+details ul {
+  margin-top: 8px;
+  padding-left: 20px;
+  color: var(--color-text-muted);
+}
+
+/* --- TABELA DE PRODUTOS --- */
+.ListaProdutosComprados {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+
+.ListaProdutosComprados th,
+.ListaProdutosComprados td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.ListaProdutosComprados th {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.ListaProdutosComprados td:last-child,
+.ListaProdutosComprados th:last-child {
+  text-align: right;
+}
+
+.ListaProdutosComprados tfoot td {
+  border-bottom: none;
+  background-color: var(--color-bg-body);
+  color: var(--color-primary);
+}
+.DetalheTop{
+  display: flex;
+  gap: 5px;
+}
+.DetalheTop button{
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.DetalhePedido button.disabled{
+  cursor: not-allowed;
+}
+.DetalheTop button:hover{
+  background-color: var(--color-accent-hover);
+  transform: scale(1.1);
+}
+.Formulario{
+  width: 250px;
+  background-color: var(--color-bg-card);
+  padding: 15px;
+}
+.ModalAvaliacao{
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0,0.7);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+}
+.Formulario textarea{
+  min-height: 80px;
+  max-height: 80px;
+  min-width: 220px;
+  max-width: 220px;
+  resize: none;
+}
+.NotaEstrela img{
+  width: 25px;
+  cursor: pointer;
+}
+.TopFormulario{
+  display: flex;
+  justify-content: space-around;
+}
+.TopFormulario button{
+  font-weight: bolder;
+  color: red;
+  border: none;
+  cursor: pointer;
+}
+.publicarBt button{
+  width: 100px;
+  height: 25px;
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+.DetalheTop button:disabled{
+  cursor: not-allowed;
+}
+.publicarBt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}

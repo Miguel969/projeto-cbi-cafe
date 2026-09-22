@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meus Pedidos</title>
+    <link rel="stylesheet" href="../Asseds/Cores.css" />
+    <link rel="stylesheet" href="../Asseds/MeuPedidos.css" />
+    <script src="../Asseds/HeaderMain.Js" defer></script>
+    <link rel="stylesheet" href="../Asseds/HeaderFooter.css" />
+    <script src="../Asseds/MeusPedidosMain.js" defer></script>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section class="ContainerLista">
+        <h2>Lista de Pedidos</h2>
+        <div class="ListaPedidos" id="ListaPedidos">
+          <article class="CardPedido Ativo">
+            <div class="InfoPedido">
+              <span class="CodigoPedido">#00001</span>
+              <span class="DataPedido">10/09/2026</span>
+            </div>
+            <div class="StatusEntrega">
+              <span>Entregue</span>
+            </div>
+            <div class="Preco">
+              <span>R$ 250,00</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="DetalhePedido" id="DetalhePedido">
+        <h2 id="TituloDetalhe">Detalhe do pedido #00001</h2>
+        <div class="Historico">
+          <h3>Histórico do pedido</h3>
+          <div class="DetalheTop">
+            <span class="StatusAtual" id="StatusAtualDetalhe"
+              >Em preparação</span
+            >
+            <button id="AvaliarBt" onclick="AbrirForm()">Avaliar</button>
+          </div>
+
+          <details>
+            <summary>Histórico Completo</summary>
+            <ul id="HistoricoLista">
+              <li>
+                <div class="Registro">
+                  <p></p>
+                  <p></p>
+                </div>
+              </li>
+              <li>10/09/2026 14:05 - Pagamento Confirmado</li>
+              <li>10/09/2026 14:10 - Em preparação</li>
+            </ul>
+          </details>
+
+          <h3>Produtos Comprados</h3>
+          <table class="ListaProdutosComprados">
+            <thead>
+              <tr>
+                <th>Nome Produto</th>
+                <th>Qtd</th>
+                <th>Valor Unid.</th>
+              </tr>
+            </thead>
+            <tbody id="ListaProdutosComprados">
+              <tr>
+                <td>Café Grande</td>
+                <td>1x</td>
+                <td>R$ 10,00</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="2"><strong>Valor Total</strong></td>
+                <td><strong id="ValorTotal">R$ 10,00</strong></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+      <form id="FormAvaliacao">
+        <div class="ModalAvaliacao">
+          <div class="Formulario">
+            <div class="TopFormulario">
+              <h2>Avaliar Pedido</h2>
+              <button onclick="FecharForm()" type="button">X</button>
+            </div>
+
+            <label for="Cometario">Cometario</label>
+            <textarea name="Cometario" id="Cometario"></textarea>
+            <label for="">Nota</label>
+            <div class="NotaEstrela">
+              <img src="../Asseds/EstrelaDesativada.png" alt="" />
+              <img src="../Asseds/EstrelaDesativada.png" alt="" />
+              <img src="../Asseds/EstrelaDesativada.png" alt="" />
+              <img src="../Asseds/EstrelaDesativada.png" alt="" />
+              <img src="../Asseds/EstrelaDesativada.png" alt="" />
+            </div>
+            <div class="Permtir">
+              <input type="checkbox" name="Permitir" id="Permitir" />
+              <span>Permite deixar publico a sua avaliação?</span>
+            </div>
+            <div class="publicarBt">
+              <button type="submit" class="publicarBt">Publicar</button>
+            </div>
+            
+          </div>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

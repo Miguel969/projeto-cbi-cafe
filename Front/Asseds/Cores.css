@@ -1,0 +1,19 @@
+:root {
+  /* --- PALETA DE CORES (Tema Cafeteria) --- */
+  --color-primary: #3C2218;         /* Café torrado escuro (Cabeçalho, Títulos principais, Rodapé) */
+  --color-primary-light: #5C3D2E;   /* Tom de café médio */
+  --color-secondary: #F5EBE0;       /* Creme / Latte (Fundo secundário, cards, detalhes) */
+  --color-accent: #D4A373;          /* Caramelo / Dourado quente (Botões, destaques, links) */
+  --color-accent-hover: #BC8A5F;    /* Hover do botão */
+  
+  /* --- CORES NEUTRAS E DE FUNDO --- */
+  --color-bg-body: #FAF7F2;         /* Fundo da página (Off-white aconchegante) */
+  --color-bg-card: #FFFFFF;         /* Fundo de cards e formulários */
+  --color-text-main: #2B1E1A;       /* Cor do texto principal */
+  --color-text-muted: #6E5E57;      /* Texto secundário / Descrições */
+  --color-border: #E2D7CD;          /* Bordas sutis de tabelas, cards e campos */
+
+  /* --- FEEDBACK / FORMULÁRIO --- */
+  --color-success: #2E7D32;         /* Sucesso */
+  --color-error: #C62828;           /* Erro */
+}

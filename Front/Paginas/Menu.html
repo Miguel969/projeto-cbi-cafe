@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - CBI Café</title>
+    <link rel="stylesheet" href="/Front/Asseds/Cores.css">
+    <link rel="stylesheet" href="/Front/Asseds/Menu.css">
+    <link rel="stylesheet" href="/Front/Asseds/HeaderFooter.css">
+    <script src="../Asseds/MenuMain.js" defer></script>
+        <script src="../Asseds/HeaderMain.Js" defer></script>
+
+</head>
+
+<body>
+    <header>
+    </header>
+
+    <main class="menu-main">
+        <section class="menu-header">
+            <h2>Nosso Cardápio</h2>
+            <p>Selecione uma categoria para filtrar as opções do menu.</p>
+        </section>
+
+        <!-- FILTRO POR SELECT -->
+        <div class="filtro-container">
+            <label for="select-categoria">Filtrar Categoria:</label>
+            <select id="select-categoria" onchange="ListarProdutos(this.value)">
+                <option value="todos">Todos os Itens</option>
+                <option value="quentes">Cafés Quentes</option>
+                <option value="gelados">Gelados e Chás</option>
+                <option value="salgados">Salgados</option>
+                <option value="sobremesas">Sobremesas</option>
+            </select>
+        </div>
+
+        <!-- GRADE UNIFICADA DE PRODUTOS -->
+        <div class="grid-produtos" id="grid-produtos">
+            
+            <!-- CAFÉS QUENTES -->
+            <article class="CardProduto quentes">
+                <div class="ImgProduto">
+                    <img src="https://placehold.co/180x140" alt="Espresso Observador">
+                </div>
+                <div class="InfoProduto">
+                    <h4>Espresso Observador</h4>
+                    <p>Grãos 100% arábica com torra média e notas de nozes.</p>
+                </div>
+                <div class="cardAddCarinho">
+                    <span>R$ 8,00</span>
+                    <button type="button">Adicionar</button>
+                </div>
+            </article>
+
+            <article class="CardProduto quentes">
+                <div class="ImgProduto">
+                    <img src="https://placehold.co/180x140" alt="Cappuccino Tático">
+                </div>
+                <div class="InfoProduto">
+                    <h4>Cappuccino Tático</h4>
+                    <p>Espresso, leite vaporizado, cacau em pó e toque de canela.</p>
+                </div>
+                <div class="cardAddCarinho">
+                    <span>R$ 14,00</span>
+                    <button type="button">Adicionar</button>
+                </div>
+            </article>
+
+            <!-- GELADOS E CHÁS -->
+            <article class="CardProduto gelados">
+                <div class="ImgProduto">
+                    <img src="https://placehold.co/180x140" alt="Chá Preto Tradicional">
+                </div>
+                <div class="InfoProduto">
+                    <h4>Chá Preto Tradicional</h4>
+                    <p>Infusão clássica de chá preto com aroma levemente defumado.</p>
+                </div>
+                <div class="cardAddCarinho">
+                    <span>R$ 12,00</span>
+                    <button type="button">Adicionar</button>
+                </div>
+            </article>
+
+            <article class="CardProduto gelados">
+                <div class="ImgProduto">
+                    <img src="https://placehold.co/180x140" alt="Iced Latte Dedução">
+                </div>
+                <div class="InfoProduto">
+                    <h4>Iced Latte Dedução</h4>
+                    <p>Café gelado expresso com leite, gelo e calda de caramelo.</p>
+                </div>
+                <div class="cardAddCarinho">
+                    <span>R$ 16,00</span>
+                    <button type="button">Adicionar</button>
+                </div>
+            </article>
+
+            <!-- SALGADOS -->
+            <article class="CardProduto salgados">
+                <div class="ImgProduto">
+                    <img src="https://placehold.co/180x140" alt="Croissant Artesanal">
+                </div>
+                <div class="InfoProduto">
+                    <h4>Croissant Artesanal</h4>
+                    <p>Massa folhada amanteigada, assada diariamente.</p>
+                </div>
+                <div class="cardAddCarinho">
+                    <span>R$ 11,00</span>
+                    <button type="button">Adicionar</button>
+                </div>
+            </article>
+
+            <article class="CardProduto salgados">
+                <div class="ImgProduto">
+                    <img src="https://placehold.co/180x140" alt="Quiche de Alho-Poró">
+                </div>
+                <div class="InfoProduto">
+                    <h4>Quiche de Alho-Poró</h4>
+                    <p>Massa leve recheada com alho-poró e queijo gruyère.</p>
+                </div>
+                <div class="cardAddCarinho">
+                    <span>R$ 15,00</span>
+                    <button type="button">Adicionar</button>
+                </div>
+            </article>
+
+            <!-- SOBREMESAS -->
+            <article class="CardProduto sobremesas">
+                <div class="ImgProduto">
+                    <img src="https://placehold.co/180x140" alt="Torta Red Velvet">
+                </div>
+                <div class="InfoProduto">
+                    <h4>Torta Red Velvet</h4>
+                    <p>Camadas macias com recheio leve de cream cheese.</p>
+                </div>
+                <div class="cardAddCarinho">
+                    <span>R$ 18,00</span>
+                    <button type="button">Adicionar</button>
+                </div>
+            </article>
+
+            <article class="CardProduto sobremesas">
+                <div class="ImgProduto">
+                    <img src="https://placehold.co/180x140" alt="Cheesecake Vermelho">
+                </div>
+                <div class="InfoProduto">
+                    <h4>Cheesecake Vermelho</h4>
+                    <p>Base crocante com creme de queijo e calda de frutas vermelhas.</p>
+                </div>
+                <div class="cardAddCarinho">
+                    <span>R$ 17,00</span>
+                    <button type="button">Adicionar</button>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CBI Café. Todos os direitos reservados.</p>
+        <p>Horário: Segunda a Sábado - 07h às 20h | Contato: contato@cbicafe.com.br</p>
+    </footer>
+
+    <!-- SCRIPT SIMPLES PARA O FILTRO FUNCIONAR -->
+    <div class="carrinho-flutuante-container">
+    <button type="button" class="carrinho-flutuante-btn" aria-label="Ver Carrinho">
+        <img src="/Front/Asseds/CarinhoIcone.png" alt="Carrinho">
+        <span class="contador-carrinho">2</span>
+    </button>
+
+    <!-- POPUP DE PRÉ-VISUALIZAÇÃO DOS ITENS -->
+    <div class="carrinho-preview-popup">
+        <h4>Seu Carrinho</h4>
+
+        <ul class="preview-lista-itens">
+            <li class="preview-item">
+                <img src="https://placehold.co/40x40" alt="Espresso Observador">
+                <div class="preview-detalhes">
+                    <span class="preview-nome">Espresso Observador</span>
+                    <span class="preview-qtd-preco">1x R$ 8,00</span>
+                </div>
+            </li>
+            <li class="preview-item">
+                <img src="https://placehold.co/40x40" alt="Croissant Artesanal">
+                <div class="preview-detalhes">
+                    <span class="preview-nome">Croissant Artesanal</span>
+                    <span class="preview-qtd-preco">1x R$ 11,00</span>
+                </div>
+            </li>
+        </ul>
+
+        <div class="preview-total">
+            <span>Subtotal:</span>
+            <strong id="TotalConta">R$ 19,00</strong>
+        </div>
+
+        <div class="preview-acoes">
+            <a href="checkout.html" class="btn-checkout-rapido">Finalizar</a>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
