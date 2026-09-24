@@ -7,11 +7,13 @@ const db = require('./BancoDedados');
 
 // Configurações padrão via variáveis de ambiente
 const JWT_SECRET = process.env.JWT_SECRET
+console.log(JWT_SECRET);
+
 const TEMP_TOKEN_TIME = '15m';
 const TEMP_COOKIE_MAX_AGE = 15 * 60 * 1000; // 15 minutos em ms
 
 router.use(express.json());
-router.use(cookieparser())
+router.use(cookieparser(process.env.Cokkie_Secret))
 // ==========================================
 // FUNÇÕES AUXILIARES DE CRIPTOGRAFIA
 // ==========================================
@@ -68,6 +70,7 @@ function verificarAutenticacao(req, res, next) {
                 maxAge: TEMP_COOKIE_MAX_AGE,
                 httpOnly: true,
                 sameSite: 'lax'
+                
             });
 
             return next();

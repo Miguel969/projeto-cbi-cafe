@@ -1,6 +1,6 @@
 const ListaPedidos = document.getElementById("ListaPedidos")
 let idPedidoAtual = 0
-const evtSource = new EventSource()
+const evtSource = new EventSource('/pedidoNovo')
 async function ListarPedidos() {
     let resultado = await fetch("/listarPedidosAtivo")
     let dados = await resultado.json()
@@ -22,6 +22,7 @@ async function ListarPedidos() {
     };
 }
 ListarPedidos()
+
 async function CriarCardPedido(element,produtosElemento) {
      let elemento = ListaPedidos.insertAdjacentHTML('beforeend', `<div class="CardPedido">
                 <div class="TopCard">
@@ -46,6 +47,10 @@ function AtualizarStatus() {
    
 }
 async function finalizarPedido(id_pedido,ui) {
+    if(!confirm("Pedido finalizado?"))
+    {
+        return
+    }
     let dados = {id_pedido:id_pedido}
     let resultado = await fetch("/finalizarPedido",{method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(dados)})
     if(resultado.ok)
@@ -73,7 +78,22 @@ function Cronometro(textTempo) {
             textTempo.textContent = `${minFormatado}:${segFormatado}`;
         }
     }, 1000);
-
-
 }
 
+evtSource.onmessage = async function(event)
+{
+    console.log(event.data);
+    let dados = await JSON.parse(event.data) 
+    console.log(dados);
+    
+    if(event.data)
+    {
+         let produtosElemento = ''
+        for (let index = 0; index < dados.produtos.length; index++) {
+            const produto = dados.produtos[index];
+            produtosElemento += `<span>${produto.nome} ${produto.quantidade}x</span>`
+        }
+           CriarCardPedido(dados,produtosElemento)
+
+    }
+}
